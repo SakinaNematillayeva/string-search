@@ -1,6 +1,4 @@
-var text = prompt("Telefon raqam (+998...) yoki email nomini kiriting")
-  .trim()
-  .toLowerCase();
+var text = prompt("Telefon raqam (+998...) yoki email nomini kiriting").trim().toLowerCase();
 
 if (text.startsWith("+998")) {
 
@@ -12,22 +10,18 @@ if (text.startsWith("+998")) {
     case "91":
       operator = "Beeline";
       break;
-
     case "93":
     case "94":
       operator = "Ucell";
       break;
-
     case "99":
       operator = "Uzmobile";
       break;
-
     case "33":
       operator = "Humans";
       break;
-
     default:
-      operator = "Noma'lum operator";
+      operator = "Noma’lum operator";
   }
 
   var phone =
@@ -40,10 +34,11 @@ if (text.startsWith("+998")) {
     " " +
     text.slice(11, 13);
 
-  alert(phone + " " + "Operator: " + operator);
+
+  alert(`Raqam: ${phone} Operator: ${operator}`);
 
 } else if (!text.includes("@")) {
-  alert(text + "@gmail.com");
+  alert(`${text}@gmail.com`);
 } else {
   alert(text);
 }
